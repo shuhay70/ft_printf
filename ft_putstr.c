@@ -6,11 +6,11 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 16:50:23 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/08 16:50:40 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/10 16:11:30 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static char	ft_putstr(char *str)
+static int	ft_putstr(char *str)
 {
 	int	i;
 

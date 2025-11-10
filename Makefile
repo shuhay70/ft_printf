@@ -2,6 +2,8 @@ NAME = libft.a
 
 SRCS = ft_printf.c \
 		ft_putstr.c\
+		ft_format_check.c\
+		ft_putnbr_base.c\
        
 
 OBJS = $(SRCS:.c=.o)

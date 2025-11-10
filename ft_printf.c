@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/08 18:47:49 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/10 16:07:16 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == 'c' || format[i] == 's')
-				ft_format_check1(format[i], ap);
+				total_len += ft_format_check1(format[i], ap);
 			if (format[i] == 'd' || format[i] == 'i' || format[i] == 'u' )
-				ft_format_check2(format[i], ap);
+				total_len += ft_format_check2(format[i], ap);
 			if (format[i] == 'x' || format[i] == 'X')
-				ft_format_check3(format[i], ap);
+				total_len += ft_format_check3(format[i], ap);
 		}
 		else
 			total_len += ft_putchar_len(format[i]);
