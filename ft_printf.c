@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/07 16:59:15 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/08 18:47:49 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,6 @@ static int	ft_putchar_len(char c)
 {
 	write(1, &c, 1);
 	return (1);
-}
-
-static int	ft_format_check(char character, va_list ap)
-{
-	char	c;
-	//char	s;
-
-	if (character == 'c')
-		c = (char)va_arg(ap, int);
-	//else if (character == 's')
-	//{
-	//	s = (char)va_arg(ap, char *);
-	//	ft_printf_c(character);
-	//}
-	return (0);
 }
 
 int	ft_printf(const char *format, ...)
@@ -48,17 +33,16 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			ft_format_check(format[i], ap);
+			if (format[i] == 'c' || format[i] == 's')
+				ft_format_check1(format[i], ap);
+			if (format[i] == 'd' || format[i] == 'i' || format[i] == 'u' )
+				ft_format_check2(format[i], ap);
+			if (format[i] == 'x' || format[i] == 'X')
+				ft_format_check3(format[i], ap);
 		}
 		else
 			total_len += ft_putchar_len(format[i]);
 	}
 	va_end(ap);
 	return (total_len);
-}
-
-int	main(void)
-{
-	printf("printf : %c\n", 'a');
-	printf("printf : %c\n", ft_printf("%c", 'a'));
 }
