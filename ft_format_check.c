@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 13:17:04 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 14:30:28 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_format_check3(char character, va_list ap)
 {
 	unsigned int	x;
 	unsigned int	upper_x;
-	unsigned long	p;
+	uintptr_t		p;
 	int				total_len;
 
 	total_len = 0;
@@ -76,7 +76,7 @@ int	ft_format_check3(char character, va_list ap)
 	}
 	else if (character == 'p')
 	{
-		p = (unsigned long)va_arg(ap, void *);
+		p = (uintptr_t)va_arg(ap, void *);
 		total_len += write(1, "0x", 2);
 		total_len += ft_putnbr_base(p, "0123456789abcdef");
 	}

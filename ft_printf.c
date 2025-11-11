@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 13:47:41 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 14:35:42 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ int	ft_printf(const char *format, ...)
 
 int	main(void)
 {
-	printf("%p\n", "Hello");
-	ft_printf("%p", "Hello");
+	printf("%s\n", NULL);
+	ft_printf("%s", NULL);
 }

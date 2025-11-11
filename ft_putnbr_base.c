@@ -6,13 +6,13 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:13:16 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/10 16:46:32 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 14:30:37 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_base(long n, char *base)
+int	ft_putnbr_base(uintptr_t n, char *base)
 {
 	int	base_len;
 	int	count;
