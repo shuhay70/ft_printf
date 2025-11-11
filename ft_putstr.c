@@ -6,11 +6,11 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 16:50:23 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 14:55:32 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 16:26:41 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {
@@ -19,8 +19,8 @@ int	ft_putstr(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		write (1, "(nil)", 5)
-		return (5);
+		write (1, "(null)", 6);
+		return (6);
 	}
 	while (str[i])
 	{

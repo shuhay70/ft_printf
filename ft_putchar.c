@@ -6,14 +6,14 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:23:56 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/10 16:40:59 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 15:36:37 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 	return (1);
 }

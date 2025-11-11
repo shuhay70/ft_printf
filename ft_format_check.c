@@ -6,17 +6,17 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 14:59:38 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 19:05:42 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_format_check1(char character, va_list ap)
 {
-	char			c;
-	char			*s;
-	int				total_len;
+	char	c;
+	char	*s;
+	int		total_len;
 
 	total_len = 0;
 	if (character == 'c')
@@ -28,10 +28,6 @@ int	ft_format_check1(char character, va_list ap)
 	{
 		s = va_arg(ap, char *);
 		total_len += ft_putstr(s);
-	}
-	else if (character == '%')
-	{
-		total_len += write (1, "%", 1);
 	}
 	return (total_len);
 }
@@ -60,7 +56,6 @@ int	ft_format_check3(char character, va_list ap)
 {
 	unsigned int	x;
 	unsigned int	upper_x;
-	uintptr_t		p;
 	int				total_len;
 
 	total_len = 0;
@@ -74,11 +69,29 @@ int	ft_format_check3(char character, va_list ap)
 		upper_x = va_arg(ap, unsigned int);
 		total_len += ft_putnbr_base_uintptr(upper_x, "0123456789ABCDEF");
 	}
-	else if (character == 'p')
+	return (total_len);
+}
+
+int	ft_format_check4(char character, va_list ap)
+{
+	uintptr_t		p;
+	int				total_len;
+
+	total_len = 0;
+	if (character == 'p')
 	{
 		p = (uintptr_t)va_arg(ap, void *);
+		if (p == NULL)
+		{
+			write(1, "(nil)", 5);
+			return (5);
+		}
 		total_len += write(1, "0x", 2);
 		total_len += ft_putnbr_base_uintptr(p, "0123456789abcdef");
+	}
+	else if (character == '%')
+	{
+		total_len += write(1, "%%", 1);
 	}
 	return (total_len);
 }

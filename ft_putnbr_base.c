@@ -6,11 +6,11 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:13:16 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 14:52:11 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 15:36:37 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_base(long n, char *base)
 {

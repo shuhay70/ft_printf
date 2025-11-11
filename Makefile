@@ -1,16 +1,16 @@
-NAME = libft.a
+NAME = ft_printf.a
 
 SRCS = ft_printf.c \
 		ft_putstr.c\
 		ft_format_check.c\
-		ft_putnbr_base.c\
 		ft_putchar.c\
+		ft_putnbr_base.c\
 		ft_putnbr_base_uintptr.c\
        
 
 OBJS = $(SRCS:.c=.o)
 
-HEADER = libft.h
+HEADER = ft_printf.h
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
