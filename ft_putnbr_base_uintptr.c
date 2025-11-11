@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_uninptr.c                           :+:      :+:    :+:   */
+/*   ft_putnbr_base_uintptr.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:13:16 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 14:52:25 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 14:56:31 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_base(uintptr_t n, char *base)
+int	ft_putnbr_base_uintptr(uintptr_t n, char *base)
 {
 	int	base_len;
 	int	count;

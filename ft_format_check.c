@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 14:30:28 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 14:59:38 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_format_check2(char character, va_list ap)
 	else if (character == 'u')
 	{
 		u = va_arg(ap, unsigned int);
-		total_len += ft_putnbr_base(u, "0123456789");
+		total_len += ft_putnbr_base_uintptr(u, "0123456789");
 	}
 	return (total_len);
 }
@@ -67,18 +67,18 @@ int	ft_format_check3(char character, va_list ap)
 	if (character == 'x')
 	{
 		x = va_arg(ap, unsigned int);
-		total_len += ft_putnbr_base(x, "0123456789abcdef");
+		total_len += ft_putnbr_base_uintptr(x, "0123456789abcdef");
 	}
 	else if (character == 'X')
 	{
 		upper_x = va_arg(ap, unsigned int);
-		total_len += ft_putnbr_base(upper_x, "0123456789ABCDEF");
+		total_len += ft_putnbr_base_uintptr(upper_x, "0123456789ABCDEF");
 	}
 	else if (character == 'p')
 	{
 		p = (uintptr_t)va_arg(ap, void *);
 		total_len += write(1, "0x", 2);
-		total_len += ft_putnbr_base(p, "0123456789abcdef");
+		total_len += ft_putnbr_base_uintptr(p, "0123456789abcdef");
 	}
 	return (total_len);
 }
