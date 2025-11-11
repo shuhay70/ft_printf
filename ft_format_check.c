@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/10 22:53:09 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/11 13:17:04 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int	ft_format_check1(char character, va_list ap)
 	{
 		s = va_arg(ap, char *);
 		total_len += ft_putstr(s);
+	}
+	else if (character == '%')
+	{
+		total_len += write (1, "%", 1);
 	}
 	return (total_len);
 }
