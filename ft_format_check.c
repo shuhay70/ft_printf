@@ -6,11 +6,13 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/10 16:10:35 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/10 22:53:09 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_format_check1(char character, va_list ap)
+#include "libft.h"
+
+int	ft_format_check1(char character, va_list ap)
 {
 	char			c;
 	char			*s;
@@ -30,7 +32,7 @@ static int	ft_format_check1(char character, va_list ap)
 	return (total_len);
 }
 
-static int	ft_format_check2(char character, va_list ap)
+int	ft_format_check2(char character, va_list ap)
 {
 	int				di;
 	unsigned int	u;
@@ -50,7 +52,7 @@ static int	ft_format_check2(char character, va_list ap)
 	return (total_len);
 }
 
-static int	ft_format_check3(char character, va_list ap)
+int	ft_format_check3(char character, va_list ap)
 {
 	unsigned int	x;
 	unsigned int	upper_x;

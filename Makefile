@@ -4,6 +4,7 @@ SRCS = ft_printf.c \
 		ft_putstr.c\
 		ft_format_check.c\
 		ft_putnbr_base.c\
+		ft_putchar.c\
        
 
 OBJS = $(SRCS:.c=.o)
