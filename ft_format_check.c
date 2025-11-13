@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/13 18:29:32 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/13 18:39:26 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_format_check1(char character, va_list ap)
 {
-	char	c;int	ft_format_check4(char character, va_list ap)
+	char	c;
 	char	*s;
 	int		total_len;
 
