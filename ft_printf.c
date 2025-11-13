@@ -6,13 +6,13 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/13 17:06:21 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/13 18:08:42 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	conditional_statement(char c, int total_len, va_list *ap)
+static int	conditional_statement(char c, int total_len, va_list ap)
 {
 	if (c == 'c' || c == 's')
 		total_len += ft_format_check1(c, ap);

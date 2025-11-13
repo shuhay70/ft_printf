@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 18:37:04 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/13 16:59:50 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/13 18:29:32 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_format_check1(char character, va_list ap)
 {
-	char	c;
+	char	c;int	ft_format_check4(char character, va_list ap)
 	char	*s;
 	int		total_len;
 
@@ -34,9 +34,9 @@ int	ft_format_check1(char character, va_list ap)
 
 int	ft_format_check2(char character, va_list ap)
 {
-	int				di;
-	unsigned int	u;
-	int				total_len;
+	int					di;
+	unsigned long long	u;
+	int					total_len;
 
 	total_len = 0;
 	if (character == 'd' || character == 'i')
@@ -81,7 +81,7 @@ int	ft_format_check4(char character, va_list ap)
 	if (character == 'p')
 	{
 		p = (uintptr_t)va_arg(ap, void *);
-		if (p == NULL)
+		if (p == 0)
 		{
 			write(1, "(nil)", 5);
 			return (5);
