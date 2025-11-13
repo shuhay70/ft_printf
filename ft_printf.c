@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/11 19:41:47 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/13 16:39:02 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,19 @@ int	ft_printf(const char *format, ...)
 	return (total_len);
 }
 
-int	main(void)
-{
-	int	i;
+//int	main(void)
+//{
+//	int	i;
 
-	ft_printf("ft_printf ; %s\n", "asdf");
-	printf("printf ; %s\n", "asdf");
-	// ft_printf("ft_printf ; %p\n", 0);
-	// printf("printf ; %p\n", 0);
-	// ft_printf("ft_printf ; %%%%%\n", NULL);
-	// printf("printf ; %%%%%\n", NULL);
-	//i = ft_printf(NULL);
-	//printf("%d\n", i);
-	//i = printf(NULL);
-	//printf("%d\n", i);
-	//return (0);
-}
+//	// ft_printf("ft_printf ; %p\n", 0);
+//	// printf("printf ; %p\n", 0);
+//	// ft_printf("ft_printf ; %%%%%\n", NULL);
+//	// printf("printf ; %%%%%\n", NULL);
+//	//i = ft_printf(NULL);
+//	//printf("%d\n", i);
+//	//i = printf(NULL);
+//	//printf("%d\n", i);
+//	//return (0);
+//	ft_printf("ft_printf ; %s\n", "asdf");
+//	printf("printf ; %s\n", "asdf");
+//}
