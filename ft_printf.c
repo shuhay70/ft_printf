@@ -6,20 +6,13 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/13 16:39:02 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/13 17:06:21 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-static int	ft_putchar_len(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
-
-static int	conditional_statement(char c, int total_len, void *ap)
+static int	conditional_statement(char c, int total_len, va_list *ap)
 {
 	if (c == 'c' || c == 's')
 		total_len += ft_format_check1(c, ap);
@@ -48,10 +41,10 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			conditional_statement(format[i], total_len, ap);
+			total_len = conditional_statement(format[i], total_len, ap);
 		}
 		else
-			total_len += ft_putchar_len(format[i]);
+			total_len += ft_putchar(format[i]);
 		i++;
 	}
 	va_end(ap);
