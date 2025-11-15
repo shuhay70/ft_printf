@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/13 18:40:46 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/15 15:11:11 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,37 +53,21 @@ int	ft_printf(const char *format, ...)
 
 //#include <stdio.h>
 //#include <limits.h>
+
+//int	main(void)
+//{
+//	printf(" %u ", 9);
+//}
+
+
+
+//#include <stdio.h>
+//#include <limits.h>
 //int	main(void)
 //{
 //	int ret1, ret2;
 //	int x = 42;
 //	void *p = &x;
-
-//	printf("===== %% TESTS =====\n");
-//	ret1 = ft_printf("%%");
-//	printf("\n");
-//	ret2 = printf("%%");
-//	printf("\nret_ft: %d | ret_lib: %d\n\n", ret1, ret2);
-
-//	ret1 = ft_printf("%%%");
-//	printf("\n");
-//	ret2 = printf("%%%");
-//	printf("\nret_ft: %d | ret_lib: %d\n\n", ret1, ret2);
-
-//	ret1 = ft_printf("%");
-//	printf("\n");
-//	ret2 = printf("%");
-//	printf("\nret_ft: %d | ret_lib: %d\n\n", ret1, ret2);
-
-//	ret1 = ft_printf("%v");
-//	printf("\n");
-//	ret2 = printf("%v");
-//	printf("\nret_ft: %d | ret_lib: %d\n\n", ret1, ret2);
-
-//	ret1 = ft_printf("%\n");
-//	printf("\n");
-//	ret2 = printf("%\n");
-//	printf("ret_ft: %d | ret_lib: %d\n\n", ret1, ret2);
 
 //	printf("===== CHARACTER =====\n");
 //	ret1 = ft_printf("%c", 'A');
