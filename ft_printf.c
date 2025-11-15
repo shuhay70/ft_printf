@@ -6,7 +6,7 @@
 /*   By: hshuhei <hshuhei@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 20:24:50 by hshuhei           #+#    #+#             */
-/*   Updated: 2025/11/15 15:11:11 by hshuhei          ###   ########.fr       */
+/*   Updated: 2025/11/15 16:11:21 by hshuhei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ int	ft_printf(const char *format, ...)
 //{
 //	printf(" %u ", 9);
 //}
-
-
 
 //#include <stdio.h>
 //#include <limits.h>
